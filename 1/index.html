@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>开始学习webgl，在画布上涂一些简单的颜色</title>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width,target-densitydpi=device-dpi,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="email=no" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+</head>
+
+<body>
+</body>
+<canvas id="myCanvas" width="700" height="500"></canvas>
+
+<script id="2d-vertex-shader" type="x-shader/x-vertex">
+    void main() {
+      gl_PointSize=500.0;
+      gl_Position =vec4(0.0,0.0,0.0,1.0);
+    }
+</script>
+
+<script id="2d-fragment-shader" type="x-shader/x-fragment">
+    void main() {
+      gl_FragColor = vec4(1, 0, 0, 1);
+    }
+</script>
+
+<script src="../utils/openGLCompile.js"></script>
+<script src="webgl.js"></script>
+
+</html>
